@@ -1,9 +1,12 @@
 ## email-chatbot
 
 ### Introduction
-A tiny toy example of an email chatbot trained on randomly selected 10k emails from enron dataset. It currently has just an input layer which takes in 4 words/tokens at a time, a small embedding layer, a recurrent LSTM layer, and a dense layer. At this stage the bot is not yet coherent, more like churning out related words. It is, however, surprisingly functional and quite cool to play with, considering its small training set, tiny net, and 10 epochs only. Will build upon this and training more sophisticated models.
 
-TLDR: to use the chatbot, you can either execute in command line with `python3 email_chatbot.py` or run `email_chatbot.py` code in your favorite IDE. To see my pipeline of training this nn, see `/archive/archive_training_code.py`
+*This is my current pet project. Love learning new skills. Recently got interested in NLP. Spent a weekend learning how to buid chatbots using some of the popular tools like text embedding, long short-term memory (LSTM) layers, etc. Definitely a lot more to learn in the future in terms of building more sophisticated neural nets, eg. self-attention mechanism like Transformer. Open to collaborations and learning about NLP in general.*
+
+A tiny toy example of an email chatbot meant to help complete your sentences for writing emails. It was trained on randomly selected 10k emails from enron dataset. It currently has just an input layer which takes in 4 words/tokens at a time, a small embedding layer, a recurrent LSTM layer, and a dense layer. At this stage the bot is not yet coherent, more like churning out related words. It is, however, surprisingly functional and quite cool to play with, considering its small training set, tiny net, and 10 epochs only. Will build upon this and training more sophisticated models.
+
+**TLDR**: to use the chatbot, you can either execute in command line with `python3 email_chatbot.py` or run `email_chatbot.py` code in your favorite IDE. To see my pipeline of training this nn, see `/archive/archive_training_code.py`
 
 **A screenshot of the chat box**
 
