@@ -104,11 +104,12 @@ sequences = np.array(sequences)
 X, y = sequences[:, :-1], to_categorical(sequences[:, -1], num_classes=vocab_size)
 
 # define model
-i = tf.keras.layers.Input(shape=(X.shape[1]))
-e = tf.keras.layers.Embedding(vocab_size, 10)(i)
-l = tf.keras.layers.LSTM(10)(e)
-d = tf.keras.layers.Dense(vocab_size, activation='softmax')(l)
-model = tf.keras.Model(inputs=i, outputs=[d])
+model = tf.keras.Sequential([
+    tf.keras.layers.Input(shape=(X.shape[1])),
+    tf.keras.layers.Embedding(vocab_size, output_dim=10),
+    tf.keras.layers.LSTM(10),
+    tf.keras.layers.Dense(vocab_size, activation='softmax')
+])
 print(model.summary())
 # compile network
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
